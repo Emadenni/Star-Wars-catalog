@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Ropa+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyContainer {
+  width: 1440px;
+  height: 1024px;
+  background-color: #424242;
+  margin-top: 100px;
+}
+
+.header {
+  width: 1440px;
+  height: 347px;
+  background-image: url(.//header-background.png);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: -30px;
+}
+
+h1 {
+  color: #ffd600;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 64px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  padding-left: 50px;
+}
+
+h2 {
+  color: #ffd600;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-align: center;
+  padding-top: 18px;
+  height: 77px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#charactersTitle {
+  position: sticky;
+  top: 0;
+}
+
+#charactersList {
+  overflow-y: auto;
+}
+
+.charactersBox > h2 {
+  background-color: #535556;
+}
+
+.detailsBox > h2 {
+  background-color: #748687;
+}
+
+.charactersBox,
+.detailsBox {
+  width: 484px;
+  height: 624px;
+  background-color: #c4c4c4;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.charactersBox {
+  min-height: 624px;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  transform: translateY(-50px);
+  gap: 119px;
+  margin-left: 175px;
+  margin-right: 175px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.listItem {
+  padding: 8px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.type1 {
+  background-color: #8e8e8e;
+  color: #ffffff;
+  height: 55px;
+}
+.type2 {
+  background-color: #e1dede;
+  color: #535556;
+  height: 55px;
+}
+.type3 {
+  background-color: #444444;
+  color: #ffffff;
+  height: 55px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.arrow {
+  background-color: #c4c4c4;
+  border: none;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  display: none;
+}
+
+.pageCounter {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.buttonsContainer {
+  text-align: center;
+  margin-top: 169px;
+  letter-spacing: 10px;
+}
+
+.infoBox {
+  background-color: #ffffff;
+  width: 484px;
+  height: 274px;
+}
+
+.planetInfo {
+  background-color: #8e8e8e;
+  width: 484px;
+  height: 274px;
+}
+
+.infoBoxh3 {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-weight: 100;
+  padding-top: 5px;
+  padding-left: 20px;
+  letter-spacing: 4px;
+}
+
+.planetInfoh3 {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 100;
+  padding-top: 3px;
+  padding-left: 20px;
+}
+
+.planetInfoItem {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  padding-top: 3px;
+  padding-left: 20px;
+  color: white;
+}
+
+.detailsItem {
+  color: black;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  padding-top: 3px;
+  padding-left: 20px;
+}
+
+#spinner {
+  color: #c4c4c4;
+  width: 80px;
+  transform: translate(205px, 325px);
+  margin-top: -80px;
+}
+#spinner2 {
+  width: 60px;
+  transform: translate(205px, 235px);
+  margin-top: -60px;
+}
+
+#spinner3 {
+  width: 60px;
+  transform: translate(205px, 165px);
+  margin-top: -60px;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+.listItem:hover {
+  cursor: pointer;
+  color: #ffd600;
+}
+
+#starWarsTheme {
+  transform: translate(575px, 959px);
+  display: none;
+  margin-top: -80px;
+  margin-bottom: -10px;
+  background-color: #ffd600;
+ opacity: 0.4;
+}
+
+

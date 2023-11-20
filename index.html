@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>StarWars Catalog</title>
+  </head>
+  <body>
+    <div class="bodyContainer">
+      <audio controls id="starWarsTheme">
+        <source
+          src="./Star Wars Theme Song By John Williams.mp3"
+          type="audio/mp3"
+        />
+        Your browser doesn't support audio
+      </audio>
+
+      <audio id="laserSound" preload="auto">
+        <source src="./transition-explosion-121425.mp3" type="audio/mp3" />
+        Your browser doesn't support audio
+      </audio>
+      <header class="header">
+        <h1>
+          STAR WARS <br />
+          CATALOG
+        </h1>
+      </header>
+      <main class="main">
+
+      <div class="cardsContainer">
+       
+        <div class="charactersBox">
+          <img src="./Spinner-1s-200px.gif" alt="spinner" id="spinner" />
+          <h2 id="charactersTitle">Characters</h2>
+          <ul id="charactersList"></ul>
+
+          <div class="buttonsContainer">
+            <button class="arrow" id="left">◁</button>
+            <span class="pageCounter"></span>
+            <button class="arrow" id="right">▷</button>
+          </div>
+        </div>
+
+        <div class="detailsBox">
+          <img src="./Spinner2-1s-200px.gif" alt="spinner" id="spinner2" />
+          <h2 id="infoTitle">Details</h2>
+
+          <div class="infoBox">
+            <ul id="infoList"></ul>
+          </div>
+          <img src="./Spinner3-1s-200px.gif" alt="spinner" id="spinner3" />
+          <div class="planetInfo">
+            
+
+            <ul id="planetInfoList">
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
