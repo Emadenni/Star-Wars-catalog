@@ -103,44 +103,42 @@ document.addEventListener("DOMContentLoaded", async function () {
   /*------------------------------Create event lister on the characters items-------------------------------- */
   charactersList.addEventListener("click", async (event) => {
     startAudio();
-  
+
     const clickedElement = event.target;
     spinner2.style.display = "block";
     spinner3.style.display = "block";
-  
+
     if (clickedElement.tagName === "LI") {
-      // Remove the arrow to the already used elements
-      const listItems = charactersList.querySelectorAll("li");
-      listItems.forEach((item) => {
-        item.textContent = item.textContent.replace(" ▷", "");
-      });
-  
-      // Add arrow to the clicked element
-      clickedElement.textContent += " ▷";
-  
-      if (clickedElement.classList.contains("emptySlot")) {
-        // If the element is empty, make both cards empty
-        infoBox.innerHTML = "";
-        planetInfo.innerHTML = "";
-      } else {
-        const characterIndex = Array.from(
-          clickedElement.parentNode.children
-        ).indexOf(clickedElement);
-        const characterUrl = `https://swapi.dev/api/people/${
-          characterIndex + 1
-        }/`;
-        //If it's not empty, try to get the url using the chaacter's id and call the function.
-        try {
-          const response = await fetch(characterUrl);
-          const characterData = await response.json();
-          updateInfoBox(characterData);
-        } catch (error) {
-          console.error("Error during the API request:", error);
+        // Remove the arrow from the already used elements
+        const listItems = charactersList.querySelectorAll("li");
+        listItems.forEach((item) => {
+            item.textContent = item.textContent.replace(" ▷", "");
+        });
+
+        // Add arrow to the clicked element
+        clickedElement.textContent += " ▷";
+
+        if (clickedElement.classList.contains("emptySlot")) {
+            // If the element is empty, make both cards empty
+            infoBox.innerHTML = "";
+            planetInfo.innerHTML = "";
+        } else {
+            const characterIndex =
+                Array.from(clickedElement.parentNode.children).indexOf(clickedElement) +
+                (currentPage - 1) * charactersPerPage;
+            const characterUrl = `https://swapi.dev/api/people/${characterIndex + 1}/`;
+
+            try {
+                const response = await fetch(characterUrl);
+                const characterData = await response.json();
+                updateInfoBox(characterData);
+            } catch (error) {
+                console.error("Error during the API request:", error);
+            }
         }
-      }
     }
-  });
-  
+});
+
 
   /*------------------------------Function to put new datas in the box-------------------------------- */
   async function updateInfoBox(characterData) {
